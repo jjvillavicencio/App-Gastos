@@ -1,7 +1,7 @@
-<ion-view title="Mis Gastos">
+<ion-view title="Gastos Compartidos">
   <ion-content>
     <ion-list>
-      <ion-item ng-repeat="expense in expenses|filter:user.email" type="item-text-wrap">
+      <ion-item ng-repeat="expense in expenses" type="item-text-wrap">
         {{expense.label}}
         <span class="badge badge-balanced">
           {{expense.cost}}
@@ -17,21 +17,6 @@
         </span>
       </div>
     </div>
-
-    <ul>
-      <li ng-repeat="message in messages">
-        <!-- edit a message -->
-        <input ng-model="message.text" ng-change="messages.$save(message)" />
-        <!-- delete a message -->
-        <button ng-click="messages.$remove(message)">Delete Message</button>
-      </li>
-    </ul>
-   
-      <input type="text" placeholder="Membership No" ng-model="membershipNo">
-      <span>{{membershipNo}}</span>
-      <button class="button icon-left ion-plus" ng-click="addMessage(membershipNo)">
-      Add
-    </button>
   </ion-content>
   
   <ion-footer-bar>
