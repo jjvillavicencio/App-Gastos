@@ -1,0 +1,2 @@
+# App-Gastos
+Ionic + Firebase
